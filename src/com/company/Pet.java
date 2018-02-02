@@ -7,6 +7,17 @@ public class Pet {
     private String homeAddress;
     private int age;
     private char gender;
+    //    private String petNoise;
+
+
+    public Pet(String ownerName, String petName, String homeAddress, int age, char gender) {
+        this.ownerName = ownerName;
+        this.petName = petName;
+        this.homeAddress = homeAddress;
+        this.age = age;
+        this.gender = gender;
+
+    }
 
     public String getOwnerName() {
         return ownerName;
@@ -40,12 +51,24 @@ public class Pet {
         this.age = age;
     }
 
-    public char getGneder() {
+    public char getGender() {
         return gender;
     }
 
-    public void setGneder(char gneder) {
-        this.gender = gneder;
+    public void setGender(char gender) {
+        this.gender = gender;
     }
+
+    public int humanYear(int humanYear){
+        return humanYear;
+    }
+
+
+    protected String doesPetMakeSound(){
+
+        return "Pets make no sound.";
+
+    }
+
 
 }
