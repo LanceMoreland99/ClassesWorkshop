@@ -42,19 +42,17 @@ public class Cat extends Pet {
 
     @Override
     public int humanYear(int humanYear) {
-        if(humanYear == 1 ){
-            return 19;
-        }
-        else if(humanYear == 2){
-            return 24;
-        }
-        else {
-            return ((humanYear - 2) * 4 + 24);
-        }
+        switch (humanYear) {
 
-    }
+            case 0: humanYear = 0;
+                break;
+            case 1: humanYear = 19;
+                break;
+            case 2: humanYear = 24;
+                break;
+            default: humanYear = (humanYear - 2 * 4 + 24);
 
-    protected String makeSound() {
-        return "MEOWWWWWW!!!!!!!!";
+        }
+        return super.getOwnerName() + " is " + super.getAge() + "is human years and " + humanYear + "in cat years.";
     }
 }
